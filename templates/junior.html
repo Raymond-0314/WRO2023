@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRO2023國中組</title>
+    <link rel="icon" href="../static/img/title.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/style/style.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/style/junior-style.css"/>
+</head>
+<body>
+    <dialog id="dialog"><!--使用說明-->
+        <div id="dialog-in">
+            <div id="info-modal">
+                <p id="dialog-title">使用說明</p>
+                <button id="dialog-close-btn">close</button>
+            </div>
+        </div>
+    </dialog>
+
+    
+    <header>
+        <div id="header-in">
+            <div id="header-box-container" class="flex-row">
+                <a href="home.html" id="title">
+                    <img src="../static/img/wro logo black.webp" alt="wro" id="wro-logo">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div id="nav-in" class="flex-row">
+            <div id="nav-box-container" class="flex-row">
+                <!--<div class="nav-box">
+                    <button class="nav-btn" id="help">
+                        <div class="nav-btn-in flex-column">
+                            <img src="img/icon/baseline_help_black_48dp.png" alt="使用說明" class="nav-btn-icon">
+                            <p class="nav-btn-content">使用說明</p>
+                        </div>
+                        
+                    </button>
+                </div>-->
+                <div id="group-set" class="flex-column">
+                    <div class="group-box">
+                        <a href="elementary.html" class="group" id="elementary">國小組</a>
+                    </div>
+                    <div class="group-box">
+                        <div class="group" id="junior">國中組</div>
+                    </div>
+                </div>
+                <div class="nav-box">
+                    <button class="nav-btn" id="select-team">
+                        <div class="nav-btn-in flex-column">
+                            <img src="../static/img/icon/baseline_supervised_user_circle_black_48dp.png" alt="組別選擇" class="nav-btn-icon">
+                            <p class="nav-btn-content">組別選擇</p>
+                        </div>
+                        
+                    </button>
+                </div>
+
+
+                <!--分隔------------------->
+
+
+                <div class="nav-box">
+                    <button class="nav-btn nav-function" id="random-btn">
+                        <div class="nav-btn-in flex-column">
+                            <img src="../static/img/icon/outline_how_to_vote_black_48dp.png" alt="隨機抽籤" class="nav-btn-icon">
+                            <p class="nav-btn-content">隨機抽籤</p>
+                        </div>
+                        
+                    </button>
+                </div>
+
+                <div class="nav-box">
+                    <button class="nav-btn nav-function" id="clock-btn">
+                        <div class="nav-btn-in flex-column">
+                            <img src="../static/img/icon/outline_timer_black_48dp.png" alt="碼表計時" class="nav-btn-icon">
+                            <p class="nav-btn-content">碼表計時</p>
+                        </div>
+                        
+                    </button>
+                </div>
+
+                <div class="nav-box">
+                    <button class="nav-btn nav-function" id="score-btn">
+                        <div class="nav-btn-in flex-column">
+                            <img src="../static/img/icon/outline_fact_check_black_48dp.png" alt="分數計算" class="nav-btn-icon">
+                            <p class="nav-btn-content">分數計算</p>
+                        </div>
+                        
+                    </button>
+                </div>
+
+                <!--<div class="nav-box">
+                    <button class="nav-btn nav-function" id="save-btn">
+                        <div class="nav-btn-in flex-column">
+                            <img src="../static/img/icon/outline_save_alt_black_48dp.png" alt="成績紀錄" class="nav-btn-icon">
+                            <p class="nav-btn-content">成績紀錄</p>
+                        </div>
+                        
+                    </button>
+                </div>
+
+                <div class="nav-box">
+                    <a href="/data" target="_blank" class="nav-btn nav-function" id="data-btn">
+                        <div class="nav-btn-in flex-column">
+                            <img src="../static/img/icon/outline_assessment_black_48dp.png" alt="成績列表" class="nav-btn-icon">
+                            <p class="nav-btn-content">成績列表</p>
+                        </div>
+                        
+                    </a>
+                </div>-->
+
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <main>
+        <div id="main-in">
+            <div class="section-title">
+                <p class="section-title-font">
+                    隨機抽籤
+                </p>
+            </div>
+            <section id="random-page">
+                <div class="page-in" id="random-page-in">
+                    
+                    <div id="random-display-area" class="flex-row">
+                        <div id="display-pacific" class="display-box flex-column">
+                            <div class="display-title">太平洋區</div>
+                            <div class="display-content flex-row">
+                                <div class="mark-container flex-row">
+                                    <div id="pacific-black" class="display-black mark">1</div>
+                                    <div id="pacific-white" class="display-white mark">2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="display-cable" class="display-box flex-column">
+                            <div class="display-title">壞電纜</div>
+                            <div class="display-content">
+                                <div class="mark-container flex-row">
+                                    <div id="broken-cable" class="display-red mark">3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="display-caribbean" class="display-box flex-column">
+                            <div class="display-title">加勒比海區</div>
+                            <div class="display-content flex-row">
+                                <div class="mark-container flex-row">
+                                    <div id="caribbean-black" class="display-black mark">2</div>
+                                    <div id="caribbean-white" class="display-white mark">1</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="random-btn-area">
+                        <button id="random-obj-btn">隨機</button>
+                    </div>
+                </div>
+            </section>
+
+            <!---------------------------------------------------->
+            <div class="section-title">
+                <p class="section-title-font">
+                    碼表計時
+                </p>
+            </div>
+            <section id="clock-page">
+                <div  class="page-in" id="clock-page-in">
+                    <div class="flex-row">
+                        
+                        <div class="flex-row" id="clock-select">
+                            <button class="clock-select-btn" id="stopwatch-btn">碼表</button>
+                            <button class="clock-select-btn" id="countdown-btn">倒數</button>
+                        </div>
+                    </div>
+                    
+                    <div id="clock-container">
+                        <div id="clock-box" class="flex-row">
+                            <div id="stopwatch" class="flex-column"> <!--碼表-->
+                                <div id="stopwatch-icon" class="clock-icon-container">
+                                    <!----------------------->
+                                    <div id="stopwatch-container" class="clock-icon">
+                                        <div class="clock-dot" id="stopwatch-dot"></div>
+                                        <img class="clock-icon-img" src="../static/img/clock-icon.png" alt="clock">
+                                    </div>
+                                </div>
+                                <div id="stopwatch-time-display" class="flex-row">
+                                    
+                                    <div class="time-box flex-column">
+                                        <div class="time-title">
+                                            Hour
+                                        </div>
+                                        <div class="time-display-area" id="stopwatch-hr">
+                                            0
+                                        </div>
+                                    </div>
+                                    <div class="time-box time-box-min">
+                                        <div class="time-title">
+                                            Minute
+                                        </div>
+                                        <div class="time-display-area" id="stopwatch-min">
+                                            00
+                                        </div>
+                                    </div>
+                                    <div class="time-box">
+                                        <div class="time-title">
+                                            Second
+                                        </div>
+                                        <div class="time-display-area" id="stopwatch-sec">
+                                            00.0
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="stopwatch-control" class="flex-row">
+                                    <button id="stopwatch-play-btn" class="stopwatch-control-btn">
+                                        <img class="stopwatch-control-icon" id="stopwatch-icon-play" src="../static/img/icon/baseline_play_arrow_white_48dp.png" alt="play/pause">
+                                    </button>
+                                    <button id="stopwatch-reset-btn" class="stopwatch-control-btn">
+                                        <img class="stopwatch-control-icon" id="stopwatch-icon-reset" src="../static/img/icon/outline_restart_alt_white_48dp.png" alt="reset">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div id="countdown" class="flex-column"> <!--倒數-->
+                                <div id="countdown-icon"  class="clock-icon-container">
+                                    <!----------------------->
+                                    <div id="countdown-container" class="clock-icon">
+                                        <div class="clock-dot" id="countdown-dot"></div>
+                                        <img class="clock-icon-img" src="../static/img/clock-icon.png" alt="clock">
+                                    </div>
+                                </div>
+                                <div id="countdown-time-display" class="flex-row">
+                                    <div class="time-box flex-column">
+                                        <div class="time-title">
+                                            Hour
+                                        </div>
+                                        <div class="time-display-area" id="countdown-hr">
+                                            0
+                                        </div>
+                                    </div>
+                                    <div class="time-box time-box-min">
+                                        <div class="time-title">
+                                            Minute
+                                        </div>
+                                        <div class="time-display-area" id="countdown-min">
+                                            00
+                                        </div>
+                                    </div>
+                                    <div class="time-box">
+                                        <div class="time-title">
+                                            Second
+                                        </div>
+                                        <div class="time-display-area" id="countdown-sec">
+                                            00.0
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="countdown-control" class="flex-row">
+                                    <div id="countdown-time">
+                                        <div id="countdown-time-in" class="flex-column">
+                                            <div id="countdown-time-title">
+                                                時間設定
+                                            </div>
+                                            <p class="set-time-tl">Hour</p>
+                                            <div id="set-time-hr" class="set-time-box">
+                                                <select name="set-hr" id="set-hr" class="select-full">
+                                                    <option value="0">0</option>
+                                                </select>
+                                            </div>
+                                            <p class="set-time-tl">Minute</p>
+                                            <div id="set-time-min" class="set-time-box">
+                                                <select name="set-min" id="set-min" class="select-full">                                                    
+                                                    <option value="0">0</option>                                        
+                                                </select>
+                                            </div>
+                                            <p class="set-time-tl">Second</p>
+                                            <div id="set-time-sec" class="set-time-box">
+                                                <select name="set-sec" id="set-sec" class="select-full">                                                    
+                                                    <option value="0">0</option>
+                                                </select>
+                                            </div>
+                                            <span id="set-time-space"></span>
+                                            <button id="set-time" class="set-time-box">
+                                                設定
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <button id="countdown-set-btn" class="stopwatch-control-btn">
+                                        <img class="stopwatch-control-icon" id="countdown-icon-set" src="../static/img/icon/outline_watch_later_white_48dp.png" alt="reset">
+                                        
+                                    </button>
+                                    <button id="countdown-play-btn" class="stopwatch-control-btn">
+                                        <img class="stopwatch-control-icon" id="countdown-icon-play" src="../static/img/icon/baseline_play_arrow_white_48dp.png" alt="play/pause">
+                                    </button>
+                                    <button id="countdown-reset-btn" class="stopwatch-control-btn">
+                                        <img class="stopwatch-control-icon" id="countdown-icon-reset" src="../static/img/icon/outline_restart_alt_white_48dp.png" alt="reset">
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!---------------------------------------------------->
+            <div class="section-title">
+                <p class="section-title-font">
+                    分數計算
+                </p>
+            </div>
+            <section id="score-page">
+                <div class="page-in" id="score-page-in">
+                    
+                    <div id="score-form-area">
+                        <div class="score-box" id="score-box1">
+                            <div class="score flex-row" id="score1">
+                                <div class="score-title">電纜完全放入連接縫</div>
+                                <div class="score-select-box">
+                                    <select name="score-select1" id="score-select1" class="score-select">
+                                        <option value="0">0個</option>
+                                        <option value="1">1個</option>
+                                        <option value="2">2個</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="score flex-row" id="score2">
+                                <div class="score-title">電纜部分接觸連接縫</div>
+                                <div class="score-select-box">
+                                    <select name="score-select2" id="score-select2" class="score-select">
+                                        <option value="0">0個</option>
+                                        <option value="1">1個</option>
+                                        <option value="2">2個</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="score flex-row" id="score3">
+                                <div class="score-title">服務元件完全放入連接縫</div>
+                                <div class="score-select-box">
+                                    <select name="score-select3" id="score-select3" class="score-select">
+                                        <option value="0">0個</option>
+                                        <option value="1">1個</option>
+                                        <option value="2">2個</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="score flex-row" id="score4">
+                                <div class="score-title">服務元件部分接觸連接縫</div>
+                                <div class="score-select-box">
+                                    <select name="score-select4" id="score-select4" class="score-select">
+                                        <option value="0">0個</option>
+                                        <option value="1">1個</option>
+                                        <option value="2">2個</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="score flex-row" id="score5">
+                                <div class="score-title">電纜或服務元件接觸錯誤連接縫</div>
+                                <div class="score-select-box">
+                                    <select name="score-select5" id="score-select5" class="score-select">
+                                        <option value="0">0個</option>
+                                        <option value="1">1個</option>
+                                        <option value="2">2個</option>
+                                        <option value="3">3個</option>
+                                        <option value="4">4個</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="score flex-row" id="score6">
+                                <div class="score-title">該側電纜及服務元件擺放皆正確</div>
+                                <div class="score-select-box">
+                                    <select name="score-select6" id="score-select6" class="score-select">
+                                        <option value="0">0側</option>
+                                        <option value="1">1側</option>
+                                        <option value="2">2側</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="score-box" id="score-box2">
+                            <div class="score flex-row" id="score7">
+                                <div class="score-title">斷裂電纜回收至回收場</div>
+                                <div class="score-select-box">
+                                    <select name="score-select7" id="score-select7" class="score-select">
+                                        <option value="none">無</option>
+                                        <option value="complete">完全</option>
+                                        <option value="part">部分</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="score flex-row" id="score8">
+                                <div class="score-title">太陽能板啟動</div>
+                                <div class="score-select-box">
+                                    <select name="score-select8" id="score-select8" class="score-select">
+                                        <option value="0">0個</option>
+                                        <option value="1">1個</option>
+                                        <option value="2">2個</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="score flex-row" id="score9">
+                                <div class="score-title">島嶼障礙物沒有被移動或破壞</div>
+                                <div class="score-select-box">
+                                    <select name="score-select9" id="score-select9" class="score-select">
+                                        <option value="0">0個</option>
+                                        <option value="1">1個</option>
+                                        <option value="2">2個</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="score flex-row" id="score10">
+                                <div class="score-title">機器人正投影在開始結束區內</div>
+                                <div class="score-select-box">
+                                    <select name="score-select10" id="score-select10" class="score-select">
+                                        <option value="no">否</option>
+                                        <option value="yes">是</option>                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="score flex-row" id="score-total">
+                                <div class="score-title" id="total-score-title">得分 (滿分120分)</div>
+                                <div class="score-select-box" id="score-total-display">0分</div>
+                            </div>                
+                        </div>
+                    </div>
+                    <!--<div id="score-btn-area">
+                        <button id="score-count-btn">計算分數</button>
+                    </div>-->
+                </div>
+            </section>
+
+            <!---------------------------------------------------->
+            <!--<div class="section-title">
+                <p class="section-title-font">
+                    成績紀錄
+                </p>
+            </div>
+            <section id="save-page">
+                <div class="page-in" id="save-page-in">
+                    
+                    <form action="/data-junior" method="post" target="_blank">
+                        <div id="save-control">
+                            <div class="control-card flex-column" id="account">
+                                <div class="card-title">紀錄帳號</div>
+                                <input type="text" class="card-input" name="account" required>
+                            </div>
+                            <div class="control-card flex-column" id="group">
+                                <div class="card-title">團隊名稱</div>
+                                <input type="text" class="card-input" name="team" required>
+                            </div>
+                            <div class="control-card flex-column" id="ps">
+                                <div class="card-title">附註</div>
+                                <input type="text" class="card-input" name="ps">
+                            </div>
+                            <div class="control-card flex-column" id="hard-soft">
+                                <div class="card-title">紀錄分類</div>
+                                <select name="hard-soft" id="hard-soft-in" class="card-input save-select">
+                                    <option value="soft">程式測試</option>
+                                    <option value="hard">結構組裝</option>
+                                </select>
+                            </div>
+                            <div class="control-card flex-column" id="sr">
+                                <div class="card-title">特殊規則</div>
+                                <select name="sr" id="sr-in" class="card-input save-select">
+                                    <option value="no">無特殊規則</option>
+                                    <option value="yes">有特殊規則</option>
+                                </select>
+                            </div>
+                            <div class="control-card flex-column" id="sr-result">
+                                <div class="card-title">特規解題</div>
+                                <select name="sr-result" id="sr-result-in" class="card-input save-select">
+                                    <option value="no">未完成</option>
+                                    <option value="yes">完成</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="save-control-auto-input" class="flex-row">
+                            <input type="button" id="auto1" class="auto-input-btn" value="填入抽籤">
+                            <input type="button" id="auto2" class="auto-input-btn" value="填入碼表">
+                            <input type="button" id="auto3" class="auto-input-btn" value="填入倒數">
+                            <input type="button" id="auto4" class="auto-input-btn" value="填入分數">
+                        </div>
+                        <div id="save-data-area" class="flex-row">
+                            <div class="data-card flex-column" id="data-account">
+                                <div class="card-title">抽籤資訊</div>
+                                <input type="text" class="card-input" id="input-random" value="1, 2, 3, 2, 1" name="random">
+                            </div>
+                            <div class="data-card flex-column" id="data-time">
+                                <div class="card-title">計時結果</div>
+                                <input type="text" class="card-input" id="input-time" value="0:00:0.0" name="time">
+                            </div>
+                            <div class="data-card flex-column" id="data-score">
+                                <div class="card-title">分數</div>
+                                <input type="text" class="card-input" id="input-score" value="0" name="score">
+                            </div>
+                        </div>
+                        <div id="save-submit-area">
+                            <input type="submit" id="save-submit" value="送出">
+                        </div>
+                        
+                    </form>
+                    <iframe id="iframe" name="iframe" style="display:none;"></iframe>
+
+                </div>
+            </section>-->
+        </div>
+    </main>
+
+    
+
+    <script type="text/javascript" src="../static/js/main.js"></script>
+    <script type="text/javascript" src="../static/js/junior-random.js"></script>
+    <script type="text/javascript" src="../static/js/junior-score.js"></script>
+    <script type="text/javascript" src="../static/js/junior-save.js"></script>
+</body>
+</html>

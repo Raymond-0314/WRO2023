@@ -1,0 +1,105 @@
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+/*------------------------------------------------------------------------*/
+@font-face {
+    font-family: "Noto Sans TC";
+    src: url("../Noto_Sans_TC/NotoSansTC-Medium.otf") format("truetype");
+}
+html{
+    background-color: /*#fff*/#FAFAFA;
+    width: 100%;
+    height: 100%;
+
+    color: /*#333*/ #222222;
+    font-family: 'Noto Sans TC',"黑體-繁","微軟正黑體",sans-serif !important;
+}
+body{
+    margin: 0;
+    overflow-y: overlay;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title-img-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 50px;
+}
+#title-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+#wro-logo{
+    height: 50px;
+}
+
+#login-box{
+    width: 300px;
+    /*height: 400px;*/
+    margin-bottom: 100px;
+    border: #bfbfbf solid 1px;
+    border-radius: 20px;
+    background-color: #FAFAFA;
+}
+#title{
+    margin: 10px 20px 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    margin: 0 20px;
+
+    padding: 0 10px;
+    border-radius: 5px;
+    /*border: 1px solid #bfbfbf;*/
+}
+#account{
+    margin-top: 20px;
+    width: calc(100% - 62px);
+    height: 38px;
+    background-color: #FAFAFA;
+    border: #bfbfbf 1px solid;
+    outline: none;
+}
+#account:focus{
+    border: #222222 2px solid;
+    width: calc(100% - 64px);
+    height: 36px;
+}
+#submit{
+    margin-top: 20px;
+    width: calc(100% - 40px);
+    height: 40px;
+    border: #222222 1px solid;
+    /*font-size: 16px;*/
+    color: #FAFAFA;
+    background-color: #222222;
+    cursor: pointer;
+}
+#submit:hover{
+    background-color: black;
+    border: black 1px solid;
+}
+#signup-a{
+    margin: 20px 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222222;
+    font-size: 14px;
+}

@@ -1,0 +1,142 @@
+nav{
+    margin-bottom: 20px;
+}
+#main{
+    /*height: 1000px;*/
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.search-box{
+    margin: 0 10px;
+    /*width: calc(100% / 5);*/
+}
+p{
+    margin: 0 0 10px 0;
+}
+.input-area{
+    width: 100px;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid #bfbfbf;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 1000;
+}
+#team{
+    height: 28px;
+    width: 78px;
+}
+/*@media screen and (max-width: 600px){ 
+    .input-area{
+        width: 100px;
+        height: 30px;
+    }
+    #team{
+        width: 78px;
+    }
+}*/
+#search{
+    background-color: #c8e3f6;
+    width: 80px;
+    height: 40px; 
+    border-radius: 10px;
+    border: 0;
+    margin: 0 0 0 10px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #4690db;
+    font-family: 'Noto Sans TC',"黑體-繁","微軟正黑體",sans-serif !important;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-timing-function: ease;
+}
+#search:hover {
+    color: #c8e3f6;
+    background-color: #4690db;
+}
+#search:active {
+    transform: scale(0.9);
+}
+
+.data-box{
+    width: 70%;
+    height: auto;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.team{
+    margin-bottom: 10px
+}
+.first-line{
+    justify-content: space-between;
+}
+.hard-soft{
+    margin-right: 10px;
+    color: #707070;
+}
+.date{
+    color: #707070;
+}
+
+.data-area{
+    flex-wrap: wrap;
+}
+.inner-box{
+    background-color: #d1d1d1;
+    width: calc((100% - 40px) / 5);
+    height: auto;
+    border-radius: 10px;
+    color: #222;
+}
+@media screen and (max-width: 770px){ 
+    .inner-box{
+        width: 100%;
+    }
+}
+#sr-box{
+    margin-right: 10px;
+}
+#random-box{
+    margin-right: 10px;
+}
+#time-box{
+    margin-right: 10px;
+}
+#score-box{
+    margin-right: 10px;
+}
+@media screen and (max-width: 770px){ 
+    #sr-box{
+        margin: 0 0 10px 0;
+    }
+    #random-box{
+        margin: 0 0 10px 0;
+    }
+    #time-box{
+        margin: 0 0 10px 0;
+    }
+    #score-box{
+        margin: 0 0 10px 0;
+    }
+}
+.title{
+    margin: 10px 10px 5px 10px;
+}
+.data-num{
+    padding: 5px 10px 10px 10px;
+    background-color: #707070;
+    border-radius: 10px;
+    color: #fafafa;
+    height: calc(100% - 54px);
+    min-height: 24px;
+}
+
